@@ -1,7 +1,6 @@
 <template>
 <div class="modal-container">
   <form>
-    
     <input type="Email" required placeholder="Email">
   </form>
 
