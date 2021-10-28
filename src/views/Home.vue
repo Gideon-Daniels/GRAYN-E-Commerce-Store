@@ -2,12 +2,24 @@
   <div class="content">
     <h1>HOME</h1>
   </div>
+  <Login @close='toggleModal' :modalActive="modalActive"/>
 </template>
 
 <script>
-
+import Login from '../components/Login.vue'
+import { ref } from 'vue'
 export default {
   name: 'Home',
-  components: {}
+  components: {Login},
+  setup(){
+    const modalActive = ref(false)
+
+    const toggleModal = () => {
+      modalActive.value = !modalActive.value
+    }
+
+    return { modalActive , toggleModal}
+
+  }
 }
 </script>
