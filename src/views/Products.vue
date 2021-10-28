@@ -1,60 +1,46 @@
 <template>
+<div class="productpage">
 
-<div class="border border-primary" style="width: 18rem;">
-  <img class="card-img-top" src="https://assets.vogue.com/photos/605ba838aa9c9b371c998c8c/master/w_1280%2Cc_limit/slide_23.jpg" >
-  <div class="card-body" >
-    <h5 class="card-title">Blue Jeans</h5>
-    <p class="card-text">Some text about the jeans..</p>
-    <p class="card-prices">R299.99</p>
-   <button type="button" class="btn btn-outline-primary">ADD to Cart</button>
+
+<!-- button carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../assets/img/pants.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/img/shoes.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/img/top.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+ 
 </div>
-<div  class="border border-primary" style="width: 18rem;">
-  <img class="card-img-top" src="https://assets.vogue.com/photos/605ba838aa9c9b371c998c8c/master/w_1280%2Cc_limit/slide_23.jpg" >
-  <div class="card-body">
-    <h5 class="card-title">Blue Jeans</h5>
-    <p class="card-text">Some text about the jeans..</p>
-        <p>R299.99</p>
-    <button type="button" class="btn btn-outline-primary">ADD to Cart</button>
-  </div>
-</div>
-<div  class="border border-primary" style="width: 18rem;">
-  <img class="card-img-top" src="https://assets.vogue.com/photos/605ba838aa9c9b371c998c8c/master/w_1280%2Cc_limit/slide_23.jpg" >
-  <div class="card-body">
-    <h5 class="card-title">Blue Jeans</h5>
-    <p class="card-text">Some text about the jeans..</p>
-        <p>R299.99</p>
-     <button type="button" class="btn btn-outline-primary">ADD to Cart</button>
-  </div>
-</div>
-<div  class="border border-primary" style="width: 18rem;">
-  <img class="card-img-top" src="https://assets.vogue.com/photos/605ba838aa9c9b371c998c8c/master/w_1280%2Cc_limit/slide_23.jpg" >
-  <div class="card-body">
-    <h5 class="card-title">Blue Jeans</h5>
-    <p class="card-text">Some text about the jeans..</p>
-        <p>R299.99</p>
-   <button type="button" class="btn btn-outline-primary">ADD to Cart</button>
-  </div>
-</div>
-<div  class="border border-primary" style="width: 18rem;">
-  <img class="card-img-top" src="https://assets.vogue.com/photos/605ba838aa9c9b371c998c8c/master/w_1280%2Cc_limit/slide_23.jpg" >
-  <div class="card-body">
-    <h5 class="card-title">Blue Jeans</h5>
-    <p class="card-text">Some text about the jeans..</p>
-        <p>R299.99</p>
-     <button type="button" class="btn btn-outline-primary">ADD to Cart</button>
-  </div>
 </div>
 
-  
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>
+.productpage{
+  background-color:black ;
+  height: 100vh;
+  width: 100vw;
+}
+img{
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}
+
 
 </style>
