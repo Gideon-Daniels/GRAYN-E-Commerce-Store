@@ -1,5 +1,8 @@
 <template>
-<form class="row g-3 needs-validation" novalidate>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label" >First name</label>
     <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -47,6 +50,12 @@
     <button class="btn btn-primary" type="submit">Submit form</button>
   </div>
 </form>
+    </div>
+    <div class="col">
+      <p>Don't miss out get the deals while they still hot </p>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
