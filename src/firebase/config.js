@@ -1,26 +1,45 @@
 import firebase from 'firebase/compat/app'
+// importing firebase services
 import 'firebase/compat/firestore'
-import 'firebase/compat/auth'
 import 'firebase/compat/storage'
+import 'firebase/compat/auth'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBeeV1k8LWE1Ae3owRuBhIJKLphMzV4wds",
-    authDomain: "grayn-e-commerce-store-a47f2.firebaseapp.com",
-    projectId: "grayn-e-commerce-store-a47f2",
-    storageBucket: "grayn-e-commerce-store-a47f2.appspot.com",
-    messagingSenderId: "989695572664",
-    appId: "1:989695572664:web:631f1682986b1b988cd24d"
+    apiKey: "AIzaSyDGQv0FYP55WizUkTB6PS7Q8FKGXM1flw4",
+    authDomain: "grayn-e-commerce-store-5e2b8.firebaseapp.com",
+    projectId: "grayn-e-commerce-store-5e2b8",
+    storageBucket: "grayn-e-commerce-store-5e2b8.appspot.com",
+    messagingSenderId: "677019520746",
+    appId: "1:677019520746:web:88d4e14c7a9c2536ad9193"
   };
-
-//   init firebase
+// init firebase
 firebase.initializeApp(firebaseConfig)
 
-// init services
+//init services
 const projectFirestore = firebase.firestore()
+// project auth is used to autharize users via login and signup
 const projectAuth = firebase.auth()
+// project storage is used to store file, images and videos
 const projectStorage = firebase.storage()
 
-// timestamp
+// timestamp is a data and time object
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
 
-export { projectFirestore, projectAuth, projectStorage, timestamp, } 
+export { projectFirestore, projectAuth, projectStorage, timestamp, }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

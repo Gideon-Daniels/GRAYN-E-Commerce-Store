@@ -5,12 +5,24 @@
 <button type="button" class="btn btn-dark">Dark</button>
 </div>
   </div>
+  <Login @close='toggleModal' :modalActive="modalActive"/>
 </template>
 
 <script>
-
+import Login from '../components/Login.vue'
+import { ref } from 'vue'
 export default {
   name: 'Home',
-  components: {}
+  components: {Login},
+  setup(){
+    const modalActive = ref(true)
+
+    const toggleModal = () => {
+      modalActive.value = !modalActive.value
+    }
+
+    return { modalActive , toggleModal}
+
+  }
 }
 </script>
