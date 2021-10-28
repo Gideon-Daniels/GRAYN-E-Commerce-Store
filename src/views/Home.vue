@@ -12,7 +12,7 @@ export default {
   name: 'Home',
   components: {Login},
   setup(){
-    const modalActive = ref(false)
+    const modalActive = ref(true)
 
     const toggleModal = () => {
       modalActive.value = !modalActive.value
