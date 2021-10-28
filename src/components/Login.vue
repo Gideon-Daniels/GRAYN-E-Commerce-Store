@@ -1,8 +1,4 @@
-<template>
-<div class="modal-container">
-  <form>
-    <input type="Email" required placeholder="Email">
-<div class="modal-container " v-show="modalActive">
+<template><div class="modal-container " v-show="modalActive">
   <form @submit.prevent="handleSubmit" class="form container">
     <div class="row mb-4 container">
       <div class="col" >
