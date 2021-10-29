@@ -3,6 +3,7 @@ import Home from "../views/Home.vue";
 import Products from "../views/Products.vue";
 import About from "../views/About.vue";
 import Registration from '../views/Registration.vue';
+import CreateProducts from '../views/products/CreateProducts.vue'
 
 const routes = [
   {
@@ -25,6 +26,12 @@ const routes = [
     path: '/registration',
     name:'Registration',
     component: Registration
+  },
+  {
+    path: '/products/create',
+    name: 'CreateProducts',
+    component: CreateProducts
+
   }
 
 ];

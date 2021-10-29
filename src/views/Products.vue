@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <Navbar />
   <h1>Products</h1>
 <div class="border border-primary" style="width: 18rem;">
@@ -48,14 +49,33 @@
 </div>
 
   
+=======
+
+
+>>>>>>> Nathan
 </template>
 
 
 <script>
+<<<<<<< HEAD
 import Navbar from "../components/Navbar.vue";
 export default {
   components: { Navbar },
 };
+=======
+
+
+
+
+
+
+>>>>>>> Nathan
 </script>
 
 
+<<<<<<< HEAD
+=======
+
+
+</style>
+>>>>>>> Nathan
