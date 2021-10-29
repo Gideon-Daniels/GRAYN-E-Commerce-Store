@@ -4,15 +4,14 @@ import 'firebase/compat/auth'
 import 'firebase/compat/storage'
 import 'firebase/compat/functions'
 
-
 const firebaseConfig = {
-    apiKey: "AIzaSyAeH14pJLsWn8U-whiGtP-_QuN8j3z-OHE",
-    authDomain: "muso-ninjas-eaf54.firebaseapp.com",
-    projectId: "muso-ninjas-eaf54",
-    storageBucket: "muso-ninjas-eaf54.appspot.com",
-    messagingSenderId: "34626747002",
-    appId: "1:34626747002:web:b11a5bb2670b3e25d519c3"
-  };
+  apiKey: "AIzaSyDGQv0FYP55WizUkTB6PS7Q8FKGXM1flw4",
+  authDomain: "grayn-e-commerce-store-5e2b8.firebaseapp.com",
+  projectId: "grayn-e-commerce-store-5e2b8",
+  storageBucket: "grayn-e-commerce-store-5e2b8.appspot.com",
+  messagingSenderId: "677019520746",
+  appId: "1:677019520746:web:88d4e14c7a9c2536ad9193"
+};
 
 // init firebase
 firebase.initializeApp(firebaseConfig)
