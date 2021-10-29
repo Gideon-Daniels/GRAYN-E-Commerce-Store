@@ -1,28 +1,44 @@
 <template>
- <div class="content">
-    <h1>HOME</h1>
-    <div>
-<button type="button" class="btn btn-dark">Dark</button>
-</div>
-  </div>
-  <Login @close='toggleModal' :modalActive="modalActive"/>
+  <section id="home-page">
+    <Navbar />
+    <div class="home-images">
+      <Carousel />
+    </div>
+    <div class="product-categories"></div>
+
+    <div>Footer</div>
+    <!-- <Footer ?> -->
+  </section>
 </template>
 
 <script>
-import Login from '../components/Login.vue'
-import { ref } from 'vue'
+import Navbar from "../components/Navbar.vue";
+import Carousel from "../components/Carousel.vue";
 export default {
-  name: 'Home',
-  components: {Login},
-  setup(){
-    const modalActive = ref(true)
-
-    const toggleModal = () => {
-      modalActive.value = !modalActive.value
-    }
-
-    return { modalActive , toggleModal}
-
-  }
-}
+  name: "Home",
+  components: { Navbar, Carousel },
+};
 </script>
+
+<style scoped>
+#home-page {
+  /* background-color: grey; */
+  height: 100%;
+  width: 100%;
+}
+
+.home-images {
+  margin: 50px;
+  background-color: white;
+}
+
+.product-categories {
+  margin: 50px;
+  background-color: white;
+}
+
+.c-button {
+  color: black;
+  background-color: black;
+}
+</style>
