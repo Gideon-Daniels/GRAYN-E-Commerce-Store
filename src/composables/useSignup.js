@@ -1,29 +1,30 @@
-import { ref } from 'vue'
+import { ref } from "vue"
 import { projectAuth } from '../firebase/config'
 
 const error = ref(null)
-// function takes in param from
-const login = async(email, password) => {
-    // resets error when logging in
-    error.value = null
-    // try to catch an error if there are any
+
+const signup = async (email, password, name) => {
+    error.value= null
+
     try {
-        // login user with email and password
-        // firebase auth function
-        const res = await projectAuth.signInWithEmailAndPassword(email, password)
-        // set error value to null if there is no error
+        const res = await projectAuth.createUserWithEmailAndPassword(email, password)
+        if (!res) {
+            throw new Error('Could not complete the signup')
+        }
+        await res.user.updateProfile({ name })
         error.value = null
-        console.log(res)
-        // return res to use it again
+
+        console.log(res.user)
+        
         return res
     } catch (err) {
-        console.log(err.value)
-        error.value = 'incorrect login credentials'
+        console.log(err.message)
+        error.value = err.message
     }
 }
 
-const useLogin = () => {
-    return { error, login}
+const useSignup = () =>  {
+    return{ error, signup}
 }
 
-export default useLogin 
+export default useSignup
