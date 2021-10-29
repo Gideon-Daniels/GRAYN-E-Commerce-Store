@@ -1,6 +1,6 @@
 <template>
   <Navbar />
-  <h1>Products</h1>
+  <h1>About</h1>
 </template>
 
 <script>
