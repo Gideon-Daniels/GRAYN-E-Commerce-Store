@@ -6,29 +6,28 @@
     </div>
     <div class="product-categories"></div>
 
-    <div>Footer</div>
-    <!-- <Footer ?> -->
+    <Footer />
   </section>
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
 import Carousel from "../components/Carousel.vue";
+import Footer from "../components/Footer.vue";
 export default {
   name: "Home",
-  components: { Navbar, Carousel },
+  components: { Navbar, Carousel, Footer },
 };
 </script>
 
 <style scoped>
 #home-page {
-  /* background-color: grey; */
   height: 100%;
   width: 100%;
 }
 
 .home-images {
-  margin: 50px;
+  margin: 80px;
   background-color: white;
 }
 

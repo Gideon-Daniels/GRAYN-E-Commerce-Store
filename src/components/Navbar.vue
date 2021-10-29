@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container fixed-top">
     <header
       class="
         d-flex
@@ -8,7 +8,7 @@
         justify-content-center justify-content-md-between
         py-3
         mb-4
-        border-bottom
+        nav-container
       "
     >
       <a
@@ -50,7 +50,7 @@
               >Products
             </router-link>
           </li>
-          <!-- <li><a href="#" class="nav-link px-2 link-dark">Cart</a></li> -->
+
           <li>
             <router-link :to="{ name: 'About' }" class="nav-link px-2 link-dark"
               >About
@@ -80,4 +80,8 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+.nav-container {
+  background-color: rgb(0, 0, 0, 0.1);
+}
+</style>
