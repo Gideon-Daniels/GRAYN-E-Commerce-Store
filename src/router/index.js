@@ -5,7 +5,7 @@ import About from "../views/About.vue";
 import Registration from '../views/auth/Registration.vue';
 import Login from '../views/auth/Login.vue';
 import CreateProducts from '../views/products/CreateProducts.vue'
-
+import UsersCart from '../views/UsersCart.vue'
 const routes = [
   {
     path: "/",
@@ -37,7 +37,11 @@ const routes = [
     path: '/products/create',
     name: 'CreateProducts',
     component: CreateProducts
-
+  },
+  {
+    path: '/user/cart',
+    name: 'UsersCart',
+    component: UsersCart
   }
 
 ];

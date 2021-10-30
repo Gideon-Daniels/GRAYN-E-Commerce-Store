@@ -57,20 +57,18 @@
         </ul>
       </nav>
 
-      <div v-if="!user" class="col-md text-end">
-        <button @click="handleClick" type="button" class="btn btn-outline-primary me-2">
+      <div v-if="user" class="col-md text-end">
+        <button @click="handleClick('logout')" type="button" class="btn btn-outline-primary me-2">
           Logout
         </button>
-        <button type="button" class="btn btn-primary">Cart</button>
+        <button @click="handleClick('cart')" type="button" class="btn btn-primary">Cart</button>
       </div>
 
       <div v-else class="col-sm-3 text-end">
-        <router-link :to="{ name: 'Login' }" class="btn px-2 link-dark"
-              >Login
-        </router-link>
-        <router-link :to="{ name: 'Registration' }" class="btn px-2 link-dark"
-              >Register
-        </router-link>
+        <button @click="handleClick('signin')" type="button" class="btn btn-outline-primary me-2">
+          Signin
+        </button>
+        <button @click="handleClick('signup')" type="button" class="btn btn-primary">Signup</button>
       </div>
 
       
@@ -80,16 +78,29 @@
 <script>
 import useLogout from '../composables/useLogout'
 import getUser from '../composables/getUser'
-
+import { useRouter } from 'vue-router'
 export default {
   setup() {
     const { logout, error} = useLogout()
     const { user } = getUser()
+    const router = useRouter()
 
-    const handleClick = async() => {
+    const handleClick = async (clicked) => {
       await logout()
       if(!error.value){
-        console.log('user logged out')
+        if(clicked == 'signin'){
+          router.push({name: 'Login'})
+        }
+        else if (clicked == 'signup'){
+          router.push({name: 'Registration'})
+        }
+        else if (clicked == 'logout'){
+          router.push({name: 'Home'})
+        }
+        else if (clicked == 'cart'){
+          router.push({name: 'UsersCart'})
+        }
+
       }
     }
 

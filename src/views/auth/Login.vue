@@ -3,14 +3,18 @@
     <form @submit.prevent="handleSubmit">
       <h1 class="mb-3">Sign in</h1>
       <p>Please enter your details</p>
-      <input type="email" id="emailAddress" class="form-control mb-3" placeholder="Email" required autofocus>
-      <input type="password" id="password" class="form-control mb-3" placeholder="Password" required autofocus>
+      <input v-model="email" type="email" id="emailAddress" class="form-control mb-3" placeholder="Email" required autofocus>
+      <input v-model="password" type="password" id="password" class="form-control mb-3" placeholder="Password" required autofocus>
       <div class="text-center mt-3">
-      <button type="submit" class="btn btn-large btn-primary ">Sign In</button>
+        <div class="error"> {{error}} </div>
+        <button type="submit" class="btn btn-large btn-primary ">Sign In</button>
       </div>
       <div class="text-center mt-3">
-        <span>New Customer ? </span>
-        <router-link :to="{ name: 'Registration' }" class="link-primary">Register
+        <span>New Customer  </span>
+        <router-link 
+          :to="{ name: 'Registration' }"
+           class="link-primary"
+           >Register
         </router-link>
       </div>
       
@@ -21,11 +25,12 @@
 <script>
 import { ref } from 'vue'
 import useLogin from '@/composables/useLogin'
-
+import {useRouter} from 'vue-router' 
 export default {
-  setup(props,{emit}){
+  setup(){
     const email = ref('')
     const password = ref('')
+    const router = useRouter()
     // functions from composables 
     const { error, login } = useLogin()
 
@@ -35,7 +40,8 @@ export default {
       await login(email.value, password.value)
       // if there is no error user is logged in
       if (!error.value) {
-        context.emit()
+        router.push({ name: 'Home'})
+        console.log('user user is logged in')
       }
 
     }
@@ -47,15 +53,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 body{
   min-height: 100vh;
 }
- 
 
-  form {
-    max-width: 480px ;
-    margin:0 auto ;
-  }
   
 </style>
