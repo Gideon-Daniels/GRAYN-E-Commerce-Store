@@ -14,18 +14,15 @@ const firebaseConfig = {
   };
 // init firebase
 firebase.initializeApp(firebaseConfig)
-
-//init services
-const projectFirestore = firebase.firestore()
-// project auth is used to autharize users via login and signup
+// creating firebase auth instance
 const projectAuth = firebase.auth()
-// project storage is used to store file, images and videos
-const projectStorage = firebase.storage()
-const projectFunctions = firebase.functions()
-
-// timestamp is a data and time object
+// creating instance of firestore
+const projectFirestore = firebase.firestore()
+// creating instance of timestamp function
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
 
+const projectStorage = firebase.storage()
+// exporting
 export { projectFirestore, projectAuth, projectStorage, timestamp, }
 
 
