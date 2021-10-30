@@ -1,5 +1,4 @@
 <template>
-  <div class="container fixed-top">
     <header
       class="
         d-flex
@@ -7,7 +6,6 @@
         align-items-center
         justify-content-center justify-content-md-between
         py-3
-        mb-4
         nav-container
       "
     >
@@ -46,7 +44,7 @@
           <li>
             <router-link
               :to="{ name: 'Products' }"
-              class="nav-link px-2 link-dark"
+              class="nav-link px-2 link-dark "
               >Products
             </router-link>
           </li>
@@ -59,25 +57,45 @@
         </ul>
       </nav>
 
-      <div v-if="!user" class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">
-          Login
-        </button>
-        <button type="button" class="btn btn-primary">Register</button>
-      </div>
-
-      <div v-if="user" class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2">
+      <div v-if="!user" class="col-md text-end">
+        <button @click="handleClick" type="button" class="btn btn-outline-primary me-2">
           Logout
         </button>
         <button type="button" class="btn btn-primary">Cart</button>
       </div>
+
+      <div v-else class="col-sm-3 text-end">
+        <router-link :to="{ name: 'Login' }" class="btn px-2 link-dark"
+              >Login
+        </router-link>
+        <router-link :to="{ name: 'Registration' }" class="btn px-2 link-dark"
+              >Register
+        </router-link>
+      </div>
+
+      
     </header>
-  </div>
 </template>
 
 <script>
-export default {};
+import useLogout from '../composables/useLogout'
+import getUser from '../composables/getUser'
+
+export default {
+  setup() {
+    const { logout, error} = useLogout()
+    const { user } = getUser()
+
+    const handleClick = async() => {
+      await logout()
+      if(!error.value){
+        console.log('user logged out')
+      }
+    }
+
+    return {handleClick, user}
+  }
+};
 </script>
 
 <style>

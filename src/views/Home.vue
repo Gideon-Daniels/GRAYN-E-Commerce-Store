@@ -1,22 +1,13 @@
 <template>
-  <section id="home-page">
-    <Navbar />
-    <div class="home-images">
-      <Carousel />
-    </div>
-    <div class="product-categories"></div>
-
-    <Footer />
-  </section>
+  <Carousel />  
 </template>
 
 <script>
-import Navbar from "../components/Navbar.vue";
 import Carousel from "../components/Carousel.vue";
-import Footer from "../components/Footer.vue";
+
 export default {
   name: "Home",
-  components: { Navbar, Carousel, Footer },
+  components: {Carousel},
 };
 </script>
 

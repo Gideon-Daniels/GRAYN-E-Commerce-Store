@@ -1,4 +1,5 @@
 <template>
+
   <form @submit.prevent="handleSubmit">
     <input type="text" required v-model="name" placeholder="name">
     <input type="text" required v-model="lastName" placeholder="surname">
@@ -7,11 +8,12 @@
     <input type="tel" required v-model="number" placeholder="+27 555 8789">
     <button>Sign up</button>
   </form>
+
 </template>
 
 <script>
 import { ref } from 'vue'
-import useSignup from '../composables/useSignup'
+import useSignup from '../../composables/useSignUp'
 export default {
   setup() {
     const { error, signup} = useSignup()
