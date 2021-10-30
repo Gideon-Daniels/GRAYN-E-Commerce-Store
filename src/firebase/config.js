@@ -2,7 +2,6 @@ import firebase from 'firebase/compat/app'
 // importing firebase services
 import 'firebase/compat/firestore'
 import 'firebase/compat/storage'
-<<<<<<< HEAD
 import 'firebase/compat/auth'
 
 const firebaseConfig = {
@@ -13,34 +12,17 @@ const firebaseConfig = {
     messagingSenderId: "677019520746",
     appId: "1:677019520746:web:88d4e14c7a9c2536ad9193"
   };
-=======
-import 'firebase/compat/functions'
-
-const firebaseConfig = {
-  apiKey: "AIzaSyDGQv0FYP55WizUkTB6PS7Q8FKGXM1flw4",
-  authDomain: "grayn-e-commerce-store-5e2b8.firebaseapp.com",
-  projectId: "grayn-e-commerce-store-5e2b8",
-  storageBucket: "grayn-e-commerce-store-5e2b8.appspot.com",
-  messagingSenderId: "677019520746",
-  appId: "1:677019520746:web:88d4e14c7a9c2536ad9193"
-};
-
->>>>>>> Nathan
 // init firebase
 firebase.initializeApp(firebaseConfig)
-
-//init services
-const projectFirestore = firebase.firestore()
-// project auth is used to autharize users via login and signup
+// creating firebase auth instance
 const projectAuth = firebase.auth()
-// project storage is used to store file, images and videos
-const projectStorage = firebase.storage()
-const projectFunctions = firebase.functions()
-
-// timestamp is a data and time object
+// creating instance of firestore
+const projectFirestore = firebase.firestore()
+// creating instance of timestamp function
 const timestamp = firebase.firestore.FieldValue.serverTimestamp
 
-<<<<<<< HEAD
+const projectStorage = firebase.storage()
+// exporting
 export { projectFirestore, projectAuth, projectStorage, timestamp, }
 
 
@@ -59,6 +41,3 @@ export { projectFirestore, projectAuth, projectStorage, timestamp, }
 
 
 
-=======
-export { projectFirestore, projectAuth, projectStorage, timestamp, projectFunctions } 
->>>>>>> Nathan
