@@ -45,7 +45,7 @@ setup(){
         
     }
 
-    const types = ['image/png', 'image/jpg']
+    const types = ['image/png', 'image/jpeg']
 
     const handleChange = (e)=> {
      const selected = e.target.files[0]
