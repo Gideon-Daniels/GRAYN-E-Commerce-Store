@@ -39,7 +39,7 @@ setup(){
     const title = ref('')
     const description = ref('')
     const price = ref('')
-    const file = ref(null)
+    const file = ref(null) 
     const fileError = ref(null)
     const categorys = ref('')
     const cart = ref(false)
