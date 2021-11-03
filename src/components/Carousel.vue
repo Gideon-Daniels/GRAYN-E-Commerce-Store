@@ -5,42 +5,47 @@
     data-bs-ride="carousel"
   >
     <div class="carousel-indicators">
-      <button
+      <p
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide-to="0"
         class="active"
         aria-current="true"
         aria-label="Slide 1"
-      ></button>
-      <button
+      ></p>
+      <p
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide-to="1"
         aria-label="Slide 2"
-      ></button>
-      <button
+      ></p>
+      <p
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide-to="2"
         aria-label="Slide 3"
-      ></button>
+      ></p>
+      <p
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="3"
+        aria-label="Slide 4"
+      ></p>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../assets/images/zaid.jpeg" class="d-block w-100" alt="..." />
+        <img src="../assets/images/pants.jpeg" class="d-block" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/shoes.png" class="d-block" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="../assets/images/top.jpg" class="d-block" alt="..." />
       </div>
       <div class="carousel-item">
         <img
-          src="../assets/images/homer.jpeg"
-          class="d-block w-100"
-          alt="..."
-        />
-      </div>
-      <div class="carousel-item">
-        <img
-          src="../assets/images/amongUs.jpeg"
-          class="d-block w-100"
+          src="../assets/images/Jesus-Shoes-photo-courtesy-of-Nike.jpg"
+          class="d-block"
           alt="..."
         />
       </div>
@@ -73,7 +78,15 @@ export default {};
 <style>
 img {
   height: 500px;
-  width: 600px;
-  object-fit: fill;
+  width: 100%;
+  object-fit: contain;
+  /* background-color: black; */
+}
+
+#carouselExampleIndicators p {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
 }
 </style>
