@@ -50,7 +50,7 @@ const routes = [
     path: '/products/create',
     name: 'CreateProducts',
     component: CreateProducts,
-  }
+  }dd
 ];
 
 const router = createRouter({
