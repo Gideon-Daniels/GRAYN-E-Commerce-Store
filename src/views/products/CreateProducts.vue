@@ -1,9 +1,12 @@
 <template>
-  <form @submit.prevent="handleSubmit" >
+<div class="container mt-3">
+      <form @submit.prevent="handleSubmit" >
       <h4>Create New Product </h4>
-      <input type="text" required placeholder="Product title" v-model="title">
-      <textarea required placeholder="Product description..." v-model="description"></textarea>
-      <input type="text" required placeholder="Product Price" v-model="price">
+      
+      <input class="form-control mb-3" type="text" required v-model="title" placeholder="Title">
+      <input class="form-control mb-3" type="text" required v-model="description" placeholder="Product description...">
+      
+      <input class="form-control mb-3" type="text" required v-model="price" placeholder="Price">
       <label> Categorys</label>
        <select v-model="categorys"> 
               <option value="Tops">Tops</option>
@@ -16,22 +19,27 @@
       <div class="error">{{fileError}}</div>
 
       <div class="error"></div>
-      <button>Create</button>
+      <button class="btn btn-primary">Create</button>
   </form>
+</div>
 </template>
 
 <script>
 import { ref } from 'vue'
 import useStorage from '@/composables/useStorage'
+import userCollection from '@/composables/userCollection'
+import getUser from '@/composables/getUser'
+import {timestamp} from '@/firebase/config'
 
 export default {
 setup(){
-
+ 
     const { filePath, url, uploadImage} = useStorage()
+    const {error, addDoc} = userCollection('products')
     const title = ref('')
     const description = ref('')
     const price = ref('')
-    const file = ref(null)
+    const file = ref(null) 
     const fileError = ref(null)
     const categorys = ref('')
     const cart = ref(false)
@@ -39,8 +47,18 @@ setup(){
     const handleSubmit = async () => {
         if (file.value) {
            await uploadImage(file.value)
-           console.log('Image  uploaded, url', url.value)
-
+           await addDoc({
+              title: title.value,
+              description: description.value,
+              categorys: categorys.value,
+              price: price.value ,
+              coverUrl:url.value,
+              filePath: file.value,
+              products:[]
+           })
+           if (!error.value){
+               console.log('product added`')
+           }
         }
         
     }
@@ -56,7 +74,7 @@ setup(){
          fileError.value= null
      } else{
          file.value = null
-         fileError.value = 'Please select an image file (png or jpg)'
+         fileError.value = 'Please select an image file (png or jpeg)'
      }
 
     }
@@ -100,7 +118,7 @@ label{
     font-size: 20px;
 }
 
-button{
+/* button{
     margin-top:20px ;
      background: blue;
     border:0;
@@ -108,7 +126,7 @@ button{
     margin-top:20px ;
     color: white;
     border-radius: 20px;
-}
+} */
 
 .error{
     color: red;
