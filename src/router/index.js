@@ -27,12 +27,6 @@ const routes = [
     component: Home,
   },
   {
-    path: "/products",
-    name: "Products",
-    component: Products,
-  },
-
-  {
     path: "/about",
     name: "About",
     component: About,
@@ -48,17 +42,15 @@ const routes = [
     component: Login
   },
   {
+    path: "/products",
+    name: "Products",
+    component: Products,
+  },
+  {
     path: '/products/create',
     name: 'CreateProducts',
     component: CreateProducts,
-  },
-  {
-    path: '/user/cart',
-    name: 'UsersCart',
-    component: UsersCart,
-    beforeEnter: requireAuth
   }
-
 ];
 
 const router = createRouter({
