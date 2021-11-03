@@ -3,9 +3,7 @@
 <div class="content">
   <router-view/>
 </div>
-<footer>
-<!-- <Footer/> -->
-</footer>
+<Footer/>
 </template>
 
 <script>

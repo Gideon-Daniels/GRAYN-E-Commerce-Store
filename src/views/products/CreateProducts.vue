@@ -51,8 +51,8 @@ setup(){
               title: title.value,
               description: description.value,
               categorys: categorys.value,
-              price: price.value ,
-              coverUrl:url.value,
+              price: price.value,
+              coverUrl: url.value,
               filePath: filePath.value,
               products:[]
            })
