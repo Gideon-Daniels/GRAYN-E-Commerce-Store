@@ -7,6 +7,7 @@
         justify-content-center justify-content-md-between
         py-3
         nav-container
+        bg-dark bg-gradient
       "
     >
       <a
@@ -17,6 +18,7 @@
           col-md-3
           mb-2 mb-md-0
           text-dark text-decoration-none
+          text-white
         "
       >
         <svg
