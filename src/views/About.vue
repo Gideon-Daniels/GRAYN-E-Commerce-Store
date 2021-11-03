@@ -1,6 +1,6 @@
 <template>
 
-  <h1>About</h1>
+  <h1 class="container">About</h1>
   <div class="row">
   <div class="col-sm-6">
     <div class="card">
@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+  <div class="col-sm-6 ">
     <div class="card">
       <div class="card-body">
         <h5 class="card-title">Our History</h5>
@@ -52,4 +52,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+  h1{
+    text-align:center;
+  }
+</style>
