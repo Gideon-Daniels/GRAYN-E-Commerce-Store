@@ -27,7 +27,7 @@
     <div class="col-sm-6 ">
       <div class="card shadow">
         <div class="card-body ">
-          <h2a class="card-title text-center border-bottom border-dark text-uppercase">Our History</h2>
+          <h2 class="card-title text-center border-bottom border-dark text-uppercase">Our History</h2>
           <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic earum, esse tempore impedit quaerat provident fugit odio commodi nemo, alias ratione et ipsam accusantium, consectetur voluptatem dicta optio facere. Magni?</p>
           <h5 class="card-title">1. First to offer employee benefits</h5>
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
