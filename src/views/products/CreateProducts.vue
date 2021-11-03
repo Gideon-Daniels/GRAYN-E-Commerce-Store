@@ -53,7 +53,7 @@ setup(){
               categorys: categorys.value,
               price: price.value ,
               coverUrl:url.value,
-              filePath: file.value,
+              filePath: filePath.value,
               products:[]
            })
            if (!error.value){
