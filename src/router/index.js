@@ -6,6 +6,20 @@ import Registration from '../views/auth/Registration.vue';
 import Login from '../views/auth/Login.vue';
 import CreateProducts from '../views/products/CreateProducts.vue'
 import UsersCart from '../views/UsersCart.vue'
+
+// route guard
+import { projectAuth } from '../firebase/config'
+
+const requireAuth = (to, from, next) => {
+  let user = projectAuth.currentUser
+  // check if there is user
+  if (!user) {
+    next({ name: 'Home'})
+  }else {
+    next()
+  }
+}
+
 const routes = [
   {
     path: "/",
@@ -36,12 +50,13 @@ const routes = [
   {
     path: '/products/create',
     name: 'CreateProducts',
-    component: CreateProducts
+    component: CreateProducts,
   },
   {
     path: '/user/cart',
     name: 'UsersCart',
-    component: UsersCart
+    component: UsersCart,
+    beforeEnter: requireAuth
   }
 
 ];
