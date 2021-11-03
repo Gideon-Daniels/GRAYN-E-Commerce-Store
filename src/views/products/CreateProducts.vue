@@ -15,7 +15,7 @@
       <option value="Jacket">Jacket</option>
        </select>
       <label> Upload Product Picture</label>
-      <input type="file" @change="handleChange" >
+      <input type="file" @change="handleChange">
       <div class="error">{{fileError}}</div>
 
       <div class="error"></div>

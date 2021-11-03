@@ -6,5 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle";
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "bootstrap/js/dist/carousel"
+// import "bootstrap/bootstrap.min.css"
+
+
 
 createApp(App).use(store).use(router).mount("#app");
