@@ -34,7 +34,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../assets/images/pants.jpg" class="d-block" alt="..." />
+        <img src="../assets/images/pants.jpeg" class="d-block" alt="..." />
       </div>
       <div class="carousel-item">
         <img src="../assets/images/shoes.png" class="d-block" alt="..." />
@@ -75,7 +75,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 img {
   height: 500px;
   width: 100%;
@@ -87,5 +87,10 @@ img {
   height: 30px;
   background-color: black;
   border-radius: 50%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1) grayscale(100);
 }
 </style>
