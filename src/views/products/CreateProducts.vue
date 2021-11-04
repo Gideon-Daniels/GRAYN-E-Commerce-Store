@@ -29,7 +29,7 @@ import { ref } from 'vue'
 import useStorage from '@/composables/useStorage'
 import userCollection from '@/composables/userCollection'
 import getUser from '@/composables/getUser'
-import {timestamp} from '@/firebase/config'
+import { timestamp } from '@/firebase/config'
 
 export default {
 setup(){
@@ -54,7 +54,8 @@ setup(){
               price: price.value,
               coverUrl: url.value,
               filePath: filePath.value,
-              products:[]
+              products:[],
+              createdAt: timestamp()
            })
            if (!error.value){
                console.log('product added`')
