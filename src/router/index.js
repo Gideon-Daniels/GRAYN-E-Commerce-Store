@@ -51,6 +51,11 @@ const routes = [
     name: "CreateProducts",
     component: CreateProducts,
   },
+  {
+    path: "/products/checkout",
+    name: "UsersCart",
+    component: UsersCart,
+  },
 ];
 
 const router = createRouter({

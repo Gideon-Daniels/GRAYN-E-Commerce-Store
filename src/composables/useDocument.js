@@ -19,7 +19,6 @@ const useDocument = (collection, id) => {
             error.value = 'could not delete the document'
         }
     }
-
     return { error, isPending, deleteDoc }
 }
 
