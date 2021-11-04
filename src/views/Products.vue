@@ -1,27 +1,25 @@
 <template>
   <section class="Products">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <div class="card" style="width: 18rem">
-            <img src="" class="card-img-top" alt="" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-        </div>
+    <!-- error message -->
+    <div v-if="error" class="error">Could not fetch the data</div>
+    <!-- container -->
+    <div v-if="documents" class="container">
+      <div v-for="doc in documents" :key="doc.id">
+        {{ doc.title }}
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import getCollection from "../composables/getCollection";
+export default {
+  setup() {
+    const { error, documents } = getCollection("products");
+
+    return { error, documents };
+  },
+};
 </script>
 
 <style></style>
