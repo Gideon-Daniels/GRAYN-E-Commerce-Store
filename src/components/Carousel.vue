@@ -75,7 +75,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 img {
   height: 500px;
   width: 100%;
@@ -88,5 +88,10 @@ img {
   height: 30px;
   background-color: black;
   border-radius: 50%;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1) grayscale(100);
 }
 </style>

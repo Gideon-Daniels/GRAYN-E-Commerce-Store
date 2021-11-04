@@ -1,6 +1,6 @@
 <template>
   <div id="product-cards-container">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
       <div class="col">
         <div class="card">
           <!-- carousel one -->
@@ -260,7 +260,7 @@
           </div>
           <div class="card-body">
             <h5 class="card-title">Jackets</h5>
-            <p class="card-text">Something about our shoes Jackets.</p>
+            <p class="card-text">Something about our Jackets.</p>
             <router-link
               class="btn btn-outline-primary me-2"
               :to="{ name: 'Products' }"
@@ -279,8 +279,20 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 .hide {
   visibility: hidden;
+}
+
+img {
+  height: 200px;
+  width: 100%;
+  object-fit: contain;
+  /* background-color: black; */
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  filter: invert(1) grayscale(100);
 }
 </style>
