@@ -1,14 +1,17 @@
 <template>
 
   <Carousel />  
+
+  <ProductsCarousel />
 </template>
 
 <script>
 import Carousel from "../components/Carousel.vue";
+import ProductsCarousel from "../components/ProductsCarousel.vue"
 
 export default {
   name: "Home",
-  components: {Carousel},
+  components: {Carousel, ProductsCarousel},
 };
 </script>
 
