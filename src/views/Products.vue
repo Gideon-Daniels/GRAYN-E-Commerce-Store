@@ -7,8 +7,8 @@
       <div class="col-2">
         <button @click="filterCategories('Shoes')">Shoes</button>
         <button @click="filterCategories('Tops')">Tops</button>
-        <button @click="filterCategories('Tops')">Shoes</button>
-        <button @click="filterCategories('Tops')">Shoes</button>
+        <button @click="filterCategories('Pants')">Pants</button>
+        <button @click="filterCategories('Jackets')">Jackets</button>
       </div>
       <div class="col-10">
         <!-- search bar -->
