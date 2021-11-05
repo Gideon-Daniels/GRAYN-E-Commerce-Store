@@ -11,7 +11,7 @@
         <div class="card-body">
           <h5 class="card-title">{{doc.title}}</h5>
           <p class="card-text">{{doc.description}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-primary">Add To Cart</a>
         </div>
       </div>
       </div>
