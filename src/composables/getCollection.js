@@ -10,6 +10,7 @@ const getCollection = (collection, query) => {
     .orderBy("createdAt");
 
   if(query){
+    console.log(query)
     collectionRef = collectionRef.where(...query)
   }
 
